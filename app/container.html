@@ -1,0 +1,87 @@
+<style>
+    .grid-demo {
+        height: 60px;
+    }
+
+    .layui-nav {
+        border-radius: 0;
+    }
+    .content{
+        padding: 10px 30px 0;
+    }
+    .conLeft {
+        float: left;
+        width: 200px;
+    }
+
+    .conRight {
+        padding-left: 200px;
+    }
+    .right_container{
+        padding: 0 20px;
+    }
+</style>
+<div class="layui-row">
+    <div class="layui-col-xs9">
+        <div class="grid-demo grid-demo-bg1">
+            <ul class="layui-nav">
+                <li class="layui-nav-item"><a href="">最新活动</a></li>
+                <li class="layui-nav-item layui-this">
+                    <a>产品</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">选项1</a></dd>
+                        <dd><a href="">选项2</a></dd>
+                        <dd><a href="">选项3</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">大数据</a></li>
+                <li class="layui-nav-item">
+                    <a>解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">移动模块</a></dd>
+                        <dd><a href="">后台模版</a></dd>
+                        <dd class="layui-this"><a href="">选中项</a></dd>
+                        <dd><a href="">电商平台</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">社区</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-col-xs3">
+        <div class="grid-demo layui-bg-black">
+            mad man mad women
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="conLeft">
+        <ul class="layui-nav layui-nav-tree" lay-filter="subnav" style="margin-right: 10px;">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a>展现管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a class="router-nav" data-router="/app/carouselManage/img-manage.html">轮播管理</a></dd>
+                    <dd><a>选项二</a></dd>
+                    <dd><a>选项三</a></dd>
+                    <dd><a href="">跳转项</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a>解决方案</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">云市场</a></li>
+            <li class="layui-nav-item"><a href="">社区</a></li>
+        </ul>
+    </div>
+    <div class="conRight">
+        <div class="right_container">
+            right container
+        </div>
+    </div>
+</div>
+<script>layui.element.init();</script>

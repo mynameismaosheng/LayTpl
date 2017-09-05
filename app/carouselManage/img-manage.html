@@ -1,15 +1,17 @@
-<button type="button" class="layui-btn" id="test1">
-  <i class="layui-icon">&#xe67c;</i>上传图片
-</button>
+<div class="layui-upload-drag" id="upload">
+    <i class="layui-icon"></i>
+    <p>点击上传，或将文件拖拽到此处</p>
+</div>
 <script>
     layui.upload.render({
-        elem: '#test1' //绑定元素
+        elem: '#upload' //绑定元素
         , url: '/upload/' //上传接口
         , done: function (res) {
             //上传完毕回调
         }
         , error: function () {
-            //请求异常回调
+            layer.msg("上传失败啦QAQ");
         }
     });
+
 </script>

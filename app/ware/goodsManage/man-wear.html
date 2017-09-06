@@ -1,0 +1,26 @@
+<table id="man-wear">
+</table>
+<script>
+    var table = layui.table;
+    table.render({
+        elem: '#man-wear',
+        url: '/app/json/man-wear.json',
+        height:600,
+        page:true,
+        cols: [[ //标题栏
+            { checkbox: true }
+            , { field: 'id', title: 'ID', width: 80 }
+            , { field: 'username', title: '衣服名称', width: 120 }
+            , { field: 'sex', title: '性别', width: 80, sort: true }
+            , { field: 'logo', title: '展示logo', width: 80 }
+            , { field: 'price', title: '售价(￥)', width: 100,sort: true }
+            , { field: 'details', title: '详情', width:200 }
+            , { field: 'operation', title: '操作', width:200,
+                templet:`<div>
+                    <a href="javascript:alert({{d.id}})" class="layui-btn layui-btn-mini">编辑</a>
+                    <a href="javascript:alert({{d.id}})" class="layui-btn layui-btn-mini layui-btn-danger">删除</a>
+                </div>`}
+        ]]
+    });
+
+</script>

@@ -1,0 +1,17 @@
+<div class="layui-upload-drag" id="upload">
+    <i class="layui-icon"></i>
+    <p>拖拽logo到此处或点击选择logo</p>
+</div>
+<script>
+    layui.upload.render({
+        elem: '#upload' //绑定元素
+        , url: '/upload/' //上传接口
+        , done: function (res) {
+            //上传完毕回调
+        }
+        , error: function () {
+            layer.msg("上传失败啦QAQ");
+        }
+    });
+
+</script>

@@ -1,0 +1,29 @@
+<table id="personnel">
+    </table>
+    <script>
+        var table = layui.table;
+        table.render({
+            elem: '#personnel',
+            url: '/app/json/personnel.json',
+            height:600,
+            page:true,
+            cols: [[ //标题栏
+                { checkbox: true }
+                , { field: 'id', title: 'ID', width: 80 }
+                , { field: 'username', title: '用户名', width: 120 }
+                , { field: 'sex', title: '性别', width: 80, sort: true }
+                , { field: 'city', title: '城市', width: 80 }
+                , { field: 'sign', title: '签名', width: 177 }
+                , { field: 'experience', title: '积分', width: 80,sort: true }
+                , { field: 'score', title: '评分', width: 80,sort: true }
+                , { field: 'classify', title: '职业', width:88 }
+                , { field: 'wealth', title: '财富', width: 135,sort: true }
+                , { field: 'operation', title: '操作', width:200,
+                    templet:`<div>
+                        <a href="javascript:alert({{d.id}})" class="layui-btn layui-btn-mini">编辑</a>
+                        <a href="javascript:alert({{d.id}})" class="layui-btn layui-btn-mini layui-btn-danger">删除</a>
+                    </div>`}
+            ]]
+        });
+    
+    </script>
